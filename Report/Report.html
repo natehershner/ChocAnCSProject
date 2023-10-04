@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>Report</title>
+<style>
+.button {
+  background-color: #990000; 
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1 {padding: 10px 24px;}
+.dropbtn {
+            background-color: #990000;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            padding: 10px 24px;
+            margin: 4px 2px
+        }
+
+        
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: #800000;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            top: calc(100% + 100px);
+            left: 1402px;
+        }
+
+       
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+       
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .show {
+            display: block;
+        }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  color: black;
+  
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #808080;
+}
+</style>
+<body>
+<div style = "position:relative; top:100px;">
+<h1><font color = "#990000">CS 200 Project 1 </h1>
+</div>
+<div>
+<button style = "position:relative; left:1400px; top:100px; " class = "button button1" id="TaskButton" type="button">Task Distribution</button>
+<button style = "position:relative; left:1401px; top:100px; " class = "button button1" id="Stats" type="button">Bitbucket Stats</button>
+<div class="dropdown">
+  <button style = "position:relative; left:1402px; top:100px " onclick="dropMenu()" class="dropbtn">Requirements</button>
+  <div id="myDropdown" class="dropdown-content">
+      <a href="Glossary.html">Glossary</a>
+      <a href="UseCaseDiagram.html">Use Case Diagram</a>
+      <a href="UseCaseDescriptions.html">Use Case Descriptions</a>
+      <a href="StorySelectionMatrix.html">Story Selection Matrix</a>
+      <a href="GenericUserStories.html">Generic Security User Stories</a>
+  </div>
+</div>
+
+</div>
+<div style = "position:relative;top:100px;">
+<h2>Team Members</h2>
+</div>
+<table style = "position:relative; top:100px">
+  <tr>
+    <th>Name</th>
+    <th>CWID</th>
+    <th>Email</th>
+    <th>Hours Contributed</th>
+  </tr>
+  <tr>
+    <td>Cameron</td>
+    <td>x</td>
+    <td>crimson.ua.edu</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>August</td>
+    <td>x</td>
+    <td>crimson.ua.edu</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Tyler</td>
+    <td>x</td>
+    <td>crimson.ua.edu</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Nathaniel Hershner</td>
+    <td>x</td>
+    <td>nehershner@crimson.ua.edu</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Jedidiah</td>
+    <td>x</td>
+    <td>crimson.ua.edu</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Cole</td>
+    <td>x</td>
+    <td>crimson.ua.edu</td>
+    <td>5</td>
+  </tr>
+  <tr>
+  	<td>Andrew</td>
+    <td>x</td>
+    <td>crimson.ua.edu</td>
+    <td>5</td>
+</table>
+
+</body>
+<script>
+    const TaskButton = document.getElementById("TaskButton");
+    TaskButton.addEventListener("click", function() {
+    window.location.href = "TaskDistribution.html";
+    });
+    const StatsButton = document.getElementById("Stats");
+    StatsButton.addEventListener("click", function() {
+    window.location.href = "Stats.html";
+    });
+    function dropMenu() {
+        document.getElementById("myDropDown").classList.toggle("show");
+    }
+</script>
+<script>
+  // JavaScript code here
+  // When the user clicks on the button, toggle between hiding and showing the dropdown content
+  function dropMenu() {
+      document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+              }
+          }
+      }
+  }
+</script>
+</html>
+

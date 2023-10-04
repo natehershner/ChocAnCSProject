@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html>
+<meta charset="utf-8">
+<style>
+    .button {
+      background-color: #990000; 
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    .button1 {padding: 10px 24px;}
+    img{
+        border: 1px solid black;
+        
+        
+    }
+</style>
+<body>
+    <div style = "position:relative; left:1800px; top:50px;"
+    <button class = "button button1" id="Home" type="button">Home</button>
+    </div>
+    <div style = "position:relative; top:100px">
+        <h1>Story Selection Matrix</h1>
+    </div>
+    <div style = "position:relative; top:100px">
+        <img src="Matrix/p1_1.png" alt="First matrix picture">
+    </div>
+    <div style = "position:relative; top:100px">
+        <img src="Matrix/p1_2.png" alt="Second matrix picture">
+    </div>
+    </body>
+    <script>
+        const HomeButton = document.getElementById("Home");
+        HomeButton.addEventListener("click", function() {
+        window.location.href = "Report.html";
+        });
+    </script>
+    </html>
